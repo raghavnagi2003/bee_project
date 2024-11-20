@@ -1,0 +1,102 @@
+/* Main container for the list of products */
+#list-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+  }
+  
+  /* Header styling */
+  #list-product h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Grid layout for the order list headings */
+  #listproduct-format-main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    gap: 15px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #444;
+    text-align: left;
+  }
+  
+  /* Grid layout for individual product order rows */
+  #listproduct-format {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Matches heading layout */
+    gap: 15px;
+    align-items: center;
+    padding: 15px 0;
+    color: #555;
+    font-size: 14px;
+    border-bottom: 1px solid #ececec;
+  }
+  
+  #listproduct-format p {
+    word-break: break-word; /* Ensures long words or text don't overflow */
+}
+  #order-details p {
+    word-break: break-word; /* Ensures long words or text don't overflow */
+}
+  
+  /* Scroll container for all orders */
+  #listproduct-allproducts {
+    max-height: 1500px;
+    overflow-y: auto;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1200px) {
+    #listproduct-format-main,
+    #listproduct-format {
+      grid-template-columns: repeat(5, 1fr); /* Reduce to 5 columns */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    #listproduct-format-main,
+    #listproduct-format {
+      grid-template-columns: repeat(4, 1fr); /* Reduce to 4 columns */
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #list-product {
+      width: 95%;
+      padding: 10px 20px;
+      margin: 20px auto;
+    }
+  
+    #listproduct-format-main,
+    #listproduct-format {
+      grid-template-columns: repeat(3, 1fr); /* Reduce to 3 columns */
+      font-size: 13px;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #listproduct-format-main,
+    #listproduct-format {
+      grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns */
+      font-size: 12px;
+      gap: 8px;
+    }
+  }
+  
